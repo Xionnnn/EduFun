@@ -14,3 +14,6 @@ Route::prefix('writer')->group(function () {
     Route::get('/{writerId}',[WriterController::class,'getWriter'])->name('writer.get');
 });
 
+Route::get('/about',function(){
+    return view('pages.aboutUs');
+})->name('about');
