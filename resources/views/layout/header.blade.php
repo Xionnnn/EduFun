@@ -21,6 +21,9 @@
                     <a class="nav-link text-dark" href="{{route('writer.all')}}">Writers</a>
                 </li>
                 <li class="nav-item me-5">
+                    <a class="nav-link text-dark" href="{{route('popular')}}">Popular</a>
+                </li>
+                <li class="nav-item me-5">
                     <a class="nav-link text-dark" href="{{route('about')}}">About us</a>
                 </li>
             </ul>

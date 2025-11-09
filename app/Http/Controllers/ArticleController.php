@@ -23,4 +23,14 @@ class ArticleController extends Controller
 
         return view('pages.detailPage', compact('article'));
     }
+
+    public function popular(Request $request)
+    {
+        $articles = Article::with('writer')
+            ->orderByDesc('created_at')
+            ->take(6)
+            ->paginate(3);
+
+        return view('pages.popularPage', compact('articles'));
+    }
 }

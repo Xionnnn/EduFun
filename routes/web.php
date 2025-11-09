@@ -17,3 +17,4 @@ Route::prefix('writer')->group(function () {
 Route::get('/about',function(){
     return view('pages.aboutUs');
 })->name('about');
+Route::get('/popular', [ArticleController::class, 'popular'])->name('popular');

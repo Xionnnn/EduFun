@@ -3,7 +3,7 @@
 @section('konten')
     {{--Hero image--}}
     <div class="mb-3">
-        <img class="w-100" height="500px" src="{{asset('img/HomePage-Hero.jpg')}}" alt="">
+        <img class="w-100" height="550px" src="{{asset('img/HomePage-Hero.jpg')}}" alt="">
     </div>
     {{--Home page content--}}
     <div class="mx-4">
