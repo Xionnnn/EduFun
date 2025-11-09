@@ -10,7 +10,7 @@
         @foreach($articles as $article)
             <div class="row mb-4">
                 <div class="col-4">
-                    <img class="img-fluid" height="70px" src="{{asset('img/HomePage-Hero.jpg')}}" alt="">
+                    <img class="img-fluid" height="70px" src="{{asset('img/article' . $article->id . '.jpg')}}" alt="">
                 </div>
                 <div class="col-8">
                     <h2>

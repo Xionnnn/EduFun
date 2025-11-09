@@ -9,7 +9,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="text-center">
                         <div class="rounded-circle bg-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 200px; height: 200px; overflow: hidden;">
-                            <img src="{{asset('img/profile.jpg')}}" alt="Writer profile picture" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{asset('img/profile' . $writer->id . '.jpg')}}" alt="Writer profile picture" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <a class="text-dark" href="{{route('writer.get',['writerId' => $writer->id])}}">
                             <h5 class="mb-2">

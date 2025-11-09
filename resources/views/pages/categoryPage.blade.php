@@ -10,7 +10,7 @@
             <div class="row mb-4 align-items-center">
                 <div class="col-12 col-md-5 col-lg-4">
                     <img class="img-fluid rounded-4"
-                         src="{{asset('img/HomePage-Hero.jpg')}}"
+                         src="{{asset('img/article' . $article->id . '.jpg')}}"
                          alt="thumbnail"
                          style="width: 100%; height: 200px; object-fit: cover;">
                 </div>

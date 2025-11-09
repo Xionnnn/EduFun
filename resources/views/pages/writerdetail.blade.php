@@ -6,7 +6,7 @@
         {{-- Writer Info --}}
         <div class="d-flex align-items-center mb-4">
             <div class="rounded-circle bg-white d-inline-flex align-items-center justify-content-center me-3" style="width: 80px; height: 80px; overflow: hidden;">
-                <img src="{{asset('img/profile.jpg')}}" alt="profile" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="{{asset('img/profile' . $writer->id . '.jpg')}}" alt="profile" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div>
                 <h4 class="mb-1">{{$writer->name}}</h4>
@@ -18,7 +18,7 @@
         @foreach($articles as $article)
             <div class="row mb-4">
                 <div class="col-12 col-md-5 col-lg-4">
-                    <img class="img-fluid rounded-4" src="{{asset('img/HomePage-Hero.jpg')}}" alt="Content Image" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img class="img-fluid rounded-4" src="{{asset('img/article' . $article->id . '.jpg')}}" alt="Content Image" style="width: 100%; height: 200px; object-fit: cover;">
                 </div>
                 <div class="col-12 col-md-7 col-lg-8">
                     <h4 class="mb-2">
