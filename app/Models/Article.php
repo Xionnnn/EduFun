@@ -15,4 +15,11 @@ class Article extends Model
         'writer_id',
         'category_id',
     ];
+
+    public function writer(){
+        return $this->belongsTo(Writer::class);
+    }
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
 }

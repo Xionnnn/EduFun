@@ -7,26 +7,26 @@
     </div>
     {{--Home page content--}}
     <div class="mx-4">
-        @for($i = 0;$i<3;$i++)
+        @foreach($articles as $article)
             <div class="row mb-4">
                 <div class="col-4">
                     <img class="img-fluid" height="70px" src="{{asset('img/HomePage-Hero.jpg')}}" alt="">
                 </div>
                 <div class="col-8">
                     <h2>
-                        Judul
+                        {{$article->title}}
                     </h2>
                     <div class="fs-6">
-                        informasi tanggal
+                        {{$article->created_at->format('d M Y')}} | by {{$article->writer->name}}
                     </div>
                     <div class="fs-5">
-                        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget tincidunt condimentum, nisl nisl tincidunt nisl, eget tincidunt condimentum nisl nisl nisl. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod.
+                        {{$article->description}}
                     </div>
                     <div class="d-flex justify-content-end">
-                        <button type="button" class="btn btn-dark">Read more...</button>
+                        <a type="button" class="btn btn-dark" href="{{ route('detail', ['slug' => $article->slug]) }}">Read more...</a>
                     </div>
                 </div>
             </div>
-        @endfor
+        @endforeach
     </div>
 @endsection
