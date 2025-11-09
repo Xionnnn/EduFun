@@ -18,7 +18,7 @@
                     </ul>
                 </li>
                 <li class="nav-item me-5">
-                    <a class="nav-link text-dark" href="#">Writers</a>
+                    <a class="nav-link text-dark" href="{{route('writer.all')}}">Writers</a>
                 </li>
                 <li class="nav-item me-5">
                     <a class="nav-link text-dark" href="#">About us</a>

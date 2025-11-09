@@ -13,4 +13,8 @@ class Writer extends Model
         'name',
         'position',
     ];
+
+    public function articles(){
+        return $this->hasMany(Article::class);
+    }
 }
