@@ -17,7 +17,10 @@ class ArticleController extends Controller
     }
 
     public function detail($slug){
-        $article = Article::where('slug', $slug)->first();
+        $article = Article::where('slug', $slug)
+                        ->with('writer')
+                        ->first();
+
         return view('pages.detailPage', compact('article'));
     }
 }
