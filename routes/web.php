@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 //Route::get('/', function () {
@@ -21,3 +22,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[ArticleController::class, 'index'])->name('home.index');
 Route::get('/detail/{slug}',[ArticleController::class, 'detail'])->name('detail');
+Route::get('/category/{categoryId}',[CategoryController::class, 'index'])->name('category');
