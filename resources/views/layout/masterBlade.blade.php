@@ -7,11 +7,12 @@
     @include('layout.bootstrap')
 </head>
 <body>
-    <div class="container-fluid vh-100" style="background-color: #EDE8D0;">
-        @include('layout.header')
+<div class="d-flex flex-column min-vh-100" style="background-color: #EDE8D0;">
+    @include('layout.header')
+    <div class="flex-grow-1 container-fluid px-0">
         @yield('konten')
-        @include('layout.footer')
     </div>
+    @include('layout.footer')
+</div>
 </body>
 </html>
-
