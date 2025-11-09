@@ -3,7 +3,7 @@
 @section('konten')
     <div class="container-fluid px-4 py-4">
         {{-- Category Title --}}
-        <h2 class="mb-4">{{$category}}</h2>
+        <h2 class="mb-4">{{$categoryName}}</h2>
 
         {{-- Articles List --}}
         @foreach($articles as $article)

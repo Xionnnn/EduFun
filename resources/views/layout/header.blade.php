@@ -13,8 +13,8 @@
                         Category
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="{{route('category',['categoryId' => 1])}}">Interactive Multimedia</a></li>
-                        <li><a class="dropdown-item" href="{{route('category',['categoryId' => 2])}}">Software Engineering</a></li>
+                        <li><a class="dropdown-item" href="{{route('category',['categorySlug' => "Interactive-Multimedia"])}}">Interactive Multimedia</a></li>
+                        <li><a class="dropdown-item" href="{{route('category',['categorySlug' => "Software-Engineering"])}}">Software Engineering</a></li>
                     </ul>
                 </li>
                 <li class="nav-item me-5">

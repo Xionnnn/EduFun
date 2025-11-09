@@ -8,11 +8,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function index($categoryId){
-        $articles = Article::where('category_id', $categoryId)
+    public function index($categorySlug){
+        if($categorySlug == 'Interactive-Multimedia'){
+            $category = Category::where('name', 'Interactive Multimedia')->first();
+        } else{
+            $category = Category::where('name', 'Software Engineering')->first();
+        }
+
+        $articles = Article::where('category_id', $category->id)
                         ->with('writer')
                         ->get();
-        $category = Category::where('id', $categoryId)->value('name');
-        return view('pages.categoryPage', compact('articles', 'category'));
+
+        $categoryName = $category->name;
+
+        return view('pages.categoryPage', compact('articles', 'categoryName'));
     }
 }
